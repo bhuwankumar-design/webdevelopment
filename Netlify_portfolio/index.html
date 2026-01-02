@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bhuwan Kumar | Premium Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', Arial, sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+nav a:hover{
+    color:#00e5ff;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    padding:0 60px;
+}
+.hero h1{
+    font-size:55px;
+}
+.hero span{
+    color:#00e5ff;
+}
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 35px;
+    background:linear-gradient(135deg,#00e5ff,#00bcd4);
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* ROW CONTAINER */
+.row-box{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    transition:0.4s;
+}
+.row-box:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 25px 60px rgba(0,229,255,0.35);
+}
+
+/* TEXT */
+.row-text{
+    flex:1;
+}
+.row-text h2{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#00e5ff;
+}
+
+/* SKILLS */
+.skill-list{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+.skill-list div{
+    padding:10px 22px;
+    border-radius:25px;
+    background:linear-gradient(135deg,#00e5ff,#00bcd4);
+    color:black;
+    font-weight:600;
+}
+
+/* PROJECTS */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    width:100%;
+}
+.project{
+    background:rgba(0,0,0,0.45);
+    padding:25px;
+    border-radius:20px;
+    transition:0.4s;
+}
+.project:hover{
+    background:linear-gradient(135deg,#00e5ff,#00bcd4);
+    color:black;
+    transform:translateY(-8px);
+}
+.project h3{
+    margin-bottom:10px;
+}
+.project p{
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* CERTIFICATES */
+.cert-row{
+    display:flex;
+    gap:25px;
+}
+.cert{
+    padding:18px 30px;
+    border-radius:20px;
+    background:rgba(0,0,0,0.4);
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+.cert:hover{
+    background:#00e5ff;
+    color:black;
+    transform:scale(1.1);
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+}
+.modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+.modal:target{
+    display:flex;
+}
+
+/* CONTACT */
+.contact p{
+    font-size:18px;
+    margin:8px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+    .hero{
+        text-align:center;
+        padding:30px;
+    }
+    .row-box{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2>Bhuwan Kumar</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Hi, I'm <span>Bhuwan Kumar</span></h1>
+        <p>Student | Web Developer | C Programmer</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="row-box">
+    <div class="row-text">
+        <h2>About Me</h2>
+        <p>
+            B.Tech student at Rungta International Skills University,  
+            focused on clean UI design and efficient programming.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="row-box">
+    <div class="row-text">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>C Programming</div>
+            <div>Git & GitHub</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="row-box">
+    <div class="row-text">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Student Portfolio Website</h3>
+                <p>Responsive personal portfolio built using HTML & CSS with premium UI design.</p>
+            </div>
+            <div class="project">
+                <h3>Armstrong Number Checker (C)</h3>
+                <p>C program to validate 3-digit Armstrong numbers using loops and conditions.</p>
+            </div>
+            <div class="project">
+                <h3>Basic Calculator</h3>
+                <p>JavaScript based calculator performing basic arithmetic operations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="row-box">
+    <div class="row-text">
+        <h2>Certificates</h2>
+        <div class="cert-row">
+            <a href="#htmlCert" class="cert">HTML Certificate</a>
+            <a href="#cCert" class="cert">C Certificate</a>
+        </div>
+    </div>
+</section>
+
+<!-- MODALS -->
+<div id="htmlCert" class="modal">
+    <a href="#">
+        <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~4G2E22QTKZTI/CERTIFICATE_LANDING_PAGE~4G2E22QTKZTI.jpeg">
+    </a>
+</div>
+
+<div id="cCert" class="modal">
+    <a href="#">
+        <img src="https://coursera-certificate-images.s3.amazonaws.com/JH8F2FTZZA6X">
+    </a>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="row-box contact">
+    <div class="row-text">
+        <h2>Contact</h2>
+        <p>📞 8340664613</p>
+        <p>📧 bhuwan.kumar@rungta.org</p>
+        <p>📍 Rungta International Skills University</p>
+    </div>
+</section>
+
+</body>
+</html>
